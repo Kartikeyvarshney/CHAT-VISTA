@@ -1,0 +1,113 @@
+:root{
+    --backgroudColor:#EBF2FA;
+    --buttonColor:#027AEF;
+    --navbarColor:#C5DDFF;
+    --btnHoverDark:#0174e7;
+    --btnHoverLight:#a5caff;
+}
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:var(--backgroudColor);
+    font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+nav{
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0px 10px 0px 5px;
+    top:0px;
+    position: fixed;
+    background-color: var(--navbarColor);
+    color: var(--buttonColor);
+}
+nav a{
+    text-decoration: none;
+    color:var(--buttonColor); 
+    padding:10px 20px;  
+    margin:0px 20px;
+}
+
+nav #SignUp-btn{
+    border: 2px solid var(--buttonColor);
+    border-radius: 99px;
+}
+
+nav #SignUp-btn:hover{
+    background:var(--btnHoverLight);
+}
+nav #SignIn-btn{
+    background: var(--buttonColor);
+    color:#fff;
+    border-radius: 99px;
+}
+nav #SignIn-btn:hover{
+    background:var(--btnHoverDark);
+}
+nav #SignOut-btn{
+    background: var(--buttonColor);
+    color:#fff;
+    border-radius: 99px;
+}
+nav #SignOut-btn:hover{
+    background:var(--btnHoverDark);
+}
+nav .logo{
+    height:50px;
+    width:300px;
+    background-image: url('../images/VIsta-removebg-preview.png');
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat; 
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .contant{
+    height:400px ;
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:50px 20px;
+}
+main .contant #chat{
+    color: gray;
+    margin-bottom: 15px;
+}
+main .contant #app{
+    color:var(--buttonColor);
+    margin-bottom: 15px;
+}
+main .contant a{
+    margin-top: 25px;
+    text-decoration: none;
+    padding:20px 20px;
+    background: var(--buttonColor);
+    color:#fff;
+    border-radius: 99px;
+    font-weight: 700;
+}
+main .contant a:hover{
+    background:var(--btnHoverDark);
+}
+main .poster{
+    height: 500px;
+    width: 500px;
+    background-image: url('../images/miniProjectAssists-removebg-preview.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

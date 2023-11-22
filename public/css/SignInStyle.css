@@ -1,0 +1,160 @@
+:root {
+  --backgroudColor: #ebf2fa;
+  --buttonColor: #027aef;
+  --navbarColor: #c5ddff;
+  --btnHoverDark: #0174e7;
+  --btnHoverLight: #a5caff;
+  --errorBackground:#f9abab;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--backgroudColor);
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  width: 98.9vw;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  margin: 40px 0px;
+}
+.container .logo {
+  height: 60px;
+  width: 361px;
+  cursor: pointer;
+  background-image: url("../images/VIsta-removebg-preview.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.container .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.container .heading span {
+  font-size: 35px;
+}
+.container .heading p {
+  color: gray;
+}
+.container .form {
+  height:330px;
+  width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.1);
+
+}
+.container .form form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: flex-start;
+  gap:25px;
+  color: var(--buttonColor);
+}
+.container .form form input{
+    height: 40px;
+    width: 200px;
+    padding-left: 2px;
+    color:var(--buttonColor)
+}
+.container .form form input::placeholder{
+    
+    color:var(--buttonColor)
+}
+.container .form form .subpart div{
+    margin-top:15px;
+    position: relative;
+}
+.container .form form .fa-envelope {
+    text-align: center;
+    padding:  11px 0px;
+    height: 40px;
+    width:30px;
+    border-radius: 5px 0 0 5px;
+    background:#dedede;
+}
+.container .form form .fa-lock
+{
+    text-align: center;
+    padding:  11px 0px;
+    height: 40px;
+    width:30px;
+    border-radius: 5px 0 0 5px;
+    background:#dedede;
+}
+.container .form form .fa-unlock
+{
+    text-align: center;
+    padding:  11px 0px;
+    height: 40px;
+    width:30px;
+    border-radius: 5px 0 0 5px;
+    background:#dedede;
+}
+.container .form form .fa-eye{
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  cursor: pointer;
+  z-index: 15;
+  font-weight: 600;
+}
+.container .form form .fa-eye-slash{
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  cursor: pointer;
+  z-index: 15;
+  font-weight: 600;
+}
+.container .form form button{
+    all:unset;
+    color:#fff;
+    background: var(--buttonColor);
+    border-radius: 99px;
+    padding: 10px 20px;
+    width: max-content;
+    cursor: pointer;
+}
+.container .form form .email_error , .password_error{
+  color:red;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.container .form form button:hover{
+    background: var(--btnHoverDark);
+}
+
+.footer{
+    margin-top: 40px;
+    text-align: center;
+}
+.footer p{
+    padding:10px 0px;
+}
+.footer p a{
+    text-decoration: none;
+}
+.footer p a:visited{
+  color:var(--buttonColor)
+}

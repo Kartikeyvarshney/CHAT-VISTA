@@ -1,0 +1,249 @@
+:root {
+  --backgroudColor: #ebf2fa;
+  --buttonColor: #027aef;
+  --navbarColor: #c5ddff;
+  --btnHoverDark: #0174e7;
+  --btnHoverLight: #a5caff;
+  --errorBackground: #f9abab;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--backgroudColor);
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+nav {
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px 0px 5px;
+  top: 0px;
+  position: fixed;
+  z-index: 10;
+  background-color: var(--navbarColor);
+  color: var(--buttonColor);
+}
+nav a {
+  text-decoration: none;
+  color: var(--buttonColor);
+  padding: 10px 20px;
+  margin: 0px 20px;
+}
+
+nav #SignUp-btn {
+  border: 2px solid var(--buttonColor);
+  border-radius: 99px;
+}
+
+nav #SignUp-btn:hover {
+  background: var(--btnHoverLight);
+}
+nav #SignIn-btn {
+  background: var(--buttonColor);
+  color: #fff;
+  border-radius: 99px;
+}
+nav #SignIn-btn:hover {
+  background: var(--btnHoverDark);
+}
+nav #SignOut-btn {
+  background: var(--buttonColor);
+  color: #fff;
+  border-radius: 99px;
+}
+nav #SignOut-btn:hover {
+  background: var(--btnHoverDark);
+}
+nav .logo {
+  height: 50px;
+  width: 300px;
+  background-image: url("../images/VIsta-removebg-preview.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+body {
+  overflow-y: auto;
+}
+main {
+  height: calc(100vh-80px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat-room {
+  margin-top: 100px;
+  height: 600px;
+  width: 800px;
+  position: relative;
+  box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.chat-room .heading {
+  border-bottom: 1px solid var(--buttonColor);
+  height: 12%;
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 600;
+  justify-content: flex-start;
+  padding-left: 10px;
+  gap: 15px;
+  background: var(--navbarColor);
+  color: var(--btnHoverDark);
+}
+.chat-room .heading .fa-messages {
+  color: var(--btnHoverDark);
+}
+main .chat-room .messagesBox {
+  height: 75%;
+  width: 100%;
+  overflow-y: scroll;
+  
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /* padding: 0px 0 10px 0; */
+  background-image: url("../images/background.png");
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
+}
+
+main .chat-room .messagesBox .incoming {
+  height: max-content;
+  width:250px;
+  border-radius: 5px;
+  position: relative;
+  margin:10px 0 10px 0;
+}
+
+main .chat-room .messagesBox .incoming .userName {
+  height: max-content;
+  width: fit-content;
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 3px;
+  color: #71abfa;
+}
+main .chat-room .messagesBox .incoming .message {
+  height: fit-content;
+  width: 250px;;
+  padding: 20px;
+  color: #fff;
+  border-radius: 5px;
+  position: relative;
+  margin-left: 20px;
+  background: var(--buttonColor);
+  word-wrap: break-word;
+}
+main .chat-room .messagesBox .incoming .message:after {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 55%;
+  /* margin: 0 auto; */
+  width: 0;
+  height: 0;
+  border-right: 15px solid var(--buttonColor);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+main .chat-room .messagesBox .outgoing {
+  height: max-content;
+  width:250px;
+  border-radius: 5px;
+  position: relative;
+  margin:10px 0 10px 63%;
+}
+
+main .chat-room .messagesBox .outgoing .userName {
+  height: max-content;
+  width: fit-content;
+  position: relative;
+  margin-left: auto;
+  margin-bottom: 3px;
+  color: var(--btnHoverDark);
+}
+
+main .chat-room .messagesBox .outgoing .message {
+  height: fit-content;
+  width: 250px;
+  padding: 20px;
+  color: #fff;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 20px;
+  background: var(--btnHoverLight);
+  word-wrap: break-word;
+}
+main .chat-room .messagesBox .outgoing .message:after {
+  content: "";
+  position: absolute;
+  right: -14px;
+  top: calc(55%);
+  /* margin: 0 auto; */
+  width: 0;
+  height: 0;
+  border-left: 15px solid var(--btnHoverLight);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+main .chat-room .message-input {
+  height: 13%;
+  display: flex;
+}
+
+main .chat-room .message-input #userMassage {
+  outline: none;
+  height: 100%;
+  width: 90%;
+  border: 1px solid var(--buttonColor);
+  appearance: none;
+  font-size: 20px;
+  resize: none;
+  padding-left: 5px;
+  color: var(--buttonColor);
+}
+main .chat-room .message-input #userMassage::placeholder{
+  padding:25px 4px;
+  color:var(--buttonColor);
+}
+main .chat-room .message-input #userMassage::-moz-placeholder
+{ 
+  padding:25px 4px;
+  color:var(--buttonColor);
+
+}
+main .chat-room .message-input .fa-paper-plane {
+  height: 100%;
+  width: 10%;
+  font-size: 30px;
+  padding-top: 24px;
+  background: var(--navbarColor);
+  color: var(--buttonColor);
+  text-align: center;
+  padding-bottom: 20px;
+}
+main .chat-room .message-input .fa-paper-plane:hover {
+  background: var(--btnHoverLight);
+  color: var(--btnHoverDark);
+}

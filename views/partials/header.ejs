@@ -1,0 +1,22 @@
+<header>
+    <nav>
+        <div class="logo"></div>
+        <div class="links">
+            <% if(user) { %>
+                <span>Welcome , <%= user.userName %></span>
+            <a href="/signout" id="SignOut-btn">SignOut</a>
+            <%} else {%>
+                <a href="/signup" id="SignUp-btn">SignUp</a>
+            <a href="/signin" id="SignIn-btn">SignIn</a>
+            <% } %>
+        </div>
+        
+    </nav>
+</header>
+<script>
+    const logo = document.querySelector('.logo')
+
+logo.addEventListener('click', () => {
+    location.assign('/')
+})
+</script>

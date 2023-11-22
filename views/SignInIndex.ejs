@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/SignInStyle.css">
+    <link rel="stylesheet" href="v6.4.2/css/all.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <title>SignIn</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+
+        </div>
+        <div class="heading">
+            <span>Sign In</span>
+            <p>Sign In to continue with ChatVista.</p>
+        </div>
+        <div class="form">
+            <form action="#" method="post">
+                <div class="subpart">
+                    <label for="useremail">Email</label>
+                    <div>
+                        <i class="fa-solid fa-envelope"></i><input type="email" name="userEmail" id="useremail"
+                            autocomplete="off" placeholder="Enter email">
+                        <div class="email_error"></div>
+                    </div>
+                </div>
+                <div class="subpart">
+                    <label for="userpassword">Password</label>
+                    <div>
+                        <i class="fa-solid fa-lock lockIcon"></i><input type="password" name="userPassword" id="userpassword"
+                            placeholder="Enter password"><i class="fa-light fa-eye eyeIcon"></i>
+                        <div class="password_error"></div>
+                    </div>
+                </div>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="footer">
+            <p>Don't have an account ? <a href="/signup">SignUp now</a></p>
+            <p>&copy; 2023 ChatVista.</p>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/0db8727b74.js" crossorigin="anonymous"></script>
+    <script src="scripts/signInScript.js"></script>
+</body>
+
+</html>
